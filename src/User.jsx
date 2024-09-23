@@ -1,4 +1,5 @@
 import Button from "./Button";
+import "./User.css";
 
 const User = () => {
   const info = {
@@ -13,8 +14,8 @@ const User = () => {
     <>
       {isAuthenticated ? (
         <>
-          <h1>
-            Hello my name is {info.name} {info.lastName}
+          <h1 className="title">
+            Welcome {info.name} {info.lastName}
           </h1>
           <p>
             I am a student from {info.country}, I love coding and I am{info.age}{" "}
