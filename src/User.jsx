@@ -1,34 +1,10 @@
-import Button from "./Button";
-import "./User.css";
-
-const User = () => {
-  const info = {
-    name: "Hedy",
-    lastName: "Dauvergne",
-    age: 26,
-    country: "France",
-  };
-  const isAuthenticated = true;
-
+const User = ({ name, age, gender, img }) => {
   return (
     <>
-      {isAuthenticated ? (
-        <>
-          <h1 className="title">
-            Welcome {info.name} {info.lastName}
-          </h1>
-          <p>
-            I am a student from {info.country}, I love coding and I am{info.age}{" "}
-            year old.
-          </p>
-          <p>I am developping a website with React</p>
-          <Button />
-        </>
-      ) : (
-        <>
-          <h1>You are not authenticated</h1>
-        </>
-      )}
+      <h1>{name}</h1>
+      <p>{age}</p>
+      <p>{gender}</p>
+      <img src={img} alt="avatar" />
     </>
   );
 };
